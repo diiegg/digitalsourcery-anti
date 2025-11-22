@@ -12,7 +12,9 @@
 
     function handleSubmit(e: Event) {
         e.preventDefault();
-        alert(`Spell cast! We will contact ${formState.email} shortly.`);
+        alert(
+            `Transmission received! We will contact ${formState.email} shortly.`,
+        );
     }
 </script>
 
@@ -21,63 +23,71 @@
 </svelte:head>
 
 <Section class="pt-32 pb-10 text-center">
-    <h1 class="text-5xl md:text-6xl text-white mb-6">Summon Us</h1>
-    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-        Ready to transform your infrastructure? Send a signal through the void.
+    <h1 class="text-6xl md:text-8xl text-text mb-8 font-display tracking-tight">
+        Summon Us
+    </h1>
+    <p class="text-xl text-silver max-w-2xl mx-auto font-light">
+        Ready to transform your infrastructure? Send a signal through the ether.
     </p>
 </Section>
 
 <Section>
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
         <!-- Contact Info -->
         <div>
-            <h2 class="text-2xl text-white mb-6">Transmission Frequencies</h2>
-            <p class="text-gray-400 mb-8">
-                Our wizards are constantly monitoring the ether for new
-                opportunities. Expect a response within one planetary rotation.
+            <h2 class="text-3xl text-text mb-8 font-display">
+                Transmission Frequencies
+            </h2>
+            <p class="text-text/70 mb-10 text-lg leading-relaxed">
+                Our alchemists are constantly monitoring the frequencies for new
+                opportunities. Expect a response within one solar rotation.
             </p>
 
-            <div class="space-y-6">
-                <div class="flex items-center space-x-4">
+            <div class="space-y-8">
+                <div class="flex items-center space-x-6 group">
                     <div
-                        class="w-10 h-10 rounded-full bg-mana/10 flex items-center justify-center text-mana"
+                        class="w-14 h-14 rounded-full bg-emerald/10 flex items-center justify-center text-emerald text-2xl group-hover:bg-emerald group-hover:text-white transition-colors duration-300"
                     >
                         ✉️
                     </div>
                     <div>
                         <div
-                            class="text-sm text-gray-500 uppercase tracking-wider"
+                            class="text-xs text-silver uppercase tracking-widest font-bold mb-1"
                         >
                             Email
                         </div>
                         <a
                             href="mailto:hello@digitalsorcery.dev"
-                            class="text-white hover:text-mana transition-colors"
+                            class="text-text text-lg hover:text-emerald transition-colors font-display"
                             >hello@digitalsorcery.dev</a
                         >
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-6 group">
                     <div
-                        class="w-10 h-10 rounded-full bg-arcane/10 flex items-center justify-center text-arcane"
+                        class="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center text-energy text-2xl group-hover:bg-energy group-hover:text-white transition-colors duration-300"
                     >
                         📍
                     </div>
                     <div>
                         <div
-                            class="text-sm text-gray-500 uppercase tracking-wider"
+                            class="text-xs text-silver uppercase tracking-widest font-bold mb-1"
                         >
                             Base of Operations
                         </div>
-                        <div class="text-white">The Cloud (Remote First)</div>
+                        <div class="text-text text-lg font-display">
+                            The Cloud (Remote First)
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+        <div
+            class="bg-white/60 backdrop-blur-xl p-10 rounded-3xl border border-white/80 shadow-lg"
+        >
             <form onsubmit={handleSubmit}>
                 <Input
                     id="name"
@@ -105,7 +115,7 @@
                     required
                 />
 
-                <div class="mt-8">
+                <div class="mt-10">
                     <Button type="submit" variant="primary" class="w-full">
                         Send Transmission
                     </Button>

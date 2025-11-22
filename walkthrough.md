@@ -1,7 +1,7 @@
 # Digital Sorcery - Project Walkthrough
 
 ## Overview
-The **Digital Sorcery** website is now fully implemented with the **Technomancer's Grimoire** theme.
+The **Digital Sorcery** website has been transmuted to the **Solarpunk Alchemist** theme.
 
 ### Tech Stack
 - **Framework:** SvelteKit 2
@@ -9,35 +9,42 @@ The **Digital Sorcery** website is now fully implemented with the **Technomancer
 - **Styling:** Tailwind CSS 4 (Alpha/Beta)
 - **Language:** TypeScript
 
+## Theme Details: Solarpunk Alchemist
+A bright, ethereal aesthetic blending ancient wisdom with utopian technology.
+
+### Color Palette
+| Name | Hex | Usage |
+|------|-----|-------|
+| `sandstone` | `#FDF6E3` | Background (Parchment/Warm White) |
+| `emerald` | `#10B981` | Nature/Growth (Primary Accent) |
+| `energy` | `#EA580C` | Burnt Orange (Secondary Accent) |
+| `silver` | `#94A3B8` | Holographic/Metallic (Neutral) |
+| `text` | `#1F2937` | Dark Grey (Readability) |
+
+### Typography
+- **Headers:** `Syne` (Modern Geometric, Art Nouveau inspired)
+- **Body:** `Space Grotesk` (Clean, Technical)
+- **Accents:** `Pinyon Script` (Ancient Wisdom)
+
+### Visual Language
+- **Glassmorphism:** Frosted white glass with soft blurs.
+- **Geometry:** Floating circles, squares, and sacred geometry patterns.
+- **Motion:** Gentle floating animations (`animate-float`) and soft transitions.
+
 ## Site Structure
-
-### Pages
 1.  **Home (`/`)**:
-    - Hero section with "Summon Us" CTA.
-    - "The Technomancers" about section.
-    - Featured services preview.
+    - Hero with floating geometric elements.
+    - "The Alchemists" about section with glassmorphic cards.
+    - "Elemental Arts" services preview.
 2.  **Services (`/services`)**:
-    - Detailed grid of offerings (Platform Engineering, Automation, Cloud, Security, Observability, Legacy Transmutation).
-    - Tech stack tags for each service.
+    - Detailed "Grimoire" of offerings using nature/elemental metaphors.
+    - Tech stack tags in emerald green.
 3.  **Contact (`/contact`)**:
-    - Functional-looking contact form.
-    - Contact information and social placeholders.
-
-### Components (`src/lib/components`)
-- **`Button.svelte`**: Primary (Mana), Secondary (Arcane), and Ghost variants.
-- **`Card.svelte`**: Glassmorphic container with hover glow effects.
-- **`Section.svelte`**: Standard layout wrapper with consistent padding.
-- **`Input.svelte`**: Floating label inputs for forms.
-- **`Header.svelte`**: Responsive navigation bar.
-- **`Footer.svelte`**: Site footer.
-
-## Theme Details
-- **Colors**: Void (`#050505`), Mana (`#00f3ff`), Arcane (`#9d00ff`), Gold (`#ffd700`).
-- **Fonts**: `Cinzel` (Headers), `JetBrains Mono` (Body).
-- **Effects**: Glow animations, glassmorphism, gradient text.
+    - "Summon Us" form with floating label inputs.
+    - Contact info with hover effects.
 
 ## How to Run
-1.  **Install Dependencies** (if not already done):
+1.  **Install Dependencies**:
     ```bash
     npm install
     ```

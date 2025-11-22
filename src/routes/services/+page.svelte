@@ -5,44 +5,44 @@
 
     const services = [
         {
-            title: "Platform Engineering",
+            title: "Platform Ecology",
             description:
-                "We build Internal Developer Platforms (IDP) that treat your developers as customers. Reduce cognitive load and accelerate delivery.",
+                "We build Internal Developer Platforms (IDP) that treat your developers as gardeners of code. Reduce cognitive load and accelerate growth.",
             tech: ["Kubernetes", "Backstage", "Crossplane", "Port"],
-            icon: "⚡",
+            icon: "🌱",
         },
         {
-            title: "Automation Sorcery",
+            title: "Automated Flow",
             description:
-                "From CI/CD pipelines to GitOps workflows, we automate the toil away. Your deployments should be boring, reliable, and fast.",
+                "From CI/CD pipelines to GitOps workflows, we automate the toil away. Your deployments should be as natural as the tides.",
             tech: ["GitHub Actions", "GitLab CI", "ArgoCD", "Flux"],
-            icon: "🔮",
+            icon: "🌊",
         },
         {
-            title: "Cloud Architecture",
+            title: "Cloud Geometry",
             description:
-                "Designing scalable, secure, and cost-effective cloud environments. We treat infrastructure as code, ensuring reproducibility and disaster recovery.",
+                "Designing scalable, secure, and cost-effective cloud environments. We treat infrastructure as sacred geometry.",
             tech: ["AWS", "GCP", "Azure", "Terraform", "OpenTofu"],
-            icon: "☁️",
+            icon: "✨",
         },
         {
-            title: "Security Wards",
+            title: "Crystal Wards",
             description:
                 "DevSecOps integration to protect your digital assets. Automated scanning, policy enforcement, and compliance as code.",
             tech: ["Snyk", "Trivy", "OPA", "Kyverno"],
             icon: "🛡️",
         },
         {
-            title: "Observability",
+            title: "Clairvoyance",
             description:
-                "Gaze into the void and understand your system's behavior. Full-stack monitoring, logging, and tracing implementation.",
+                "Gaze into the system and understand its behavior. Full-stack monitoring, logging, and tracing implementation.",
             tech: ["Prometheus", "Grafana", "OpenTelemetry", "Datadog"],
             icon: "👁️",
         },
         {
             title: "Legacy Transmutation",
             description:
-                "Modernizing monolithic applications into microservices or serverless architectures. We guide you through the dangerous path of refactoring.",
+                "Modernizing monolithic applications into microservices. We guide you through the transformation process.",
             tech: ["Docker", "Serverless", "Migration Strategies"],
             icon: "⚗️",
         },
@@ -54,34 +54,39 @@
 </svelte:head>
 
 <Section class="pt-32 pb-10 text-center">
-    <h1 class="text-5xl md:text-6xl text-white mb-6">The Grimoire</h1>
-    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-        Our catalog of arcane services designed to elevate your technological
-        capabilities.
+    <h1 class="text-6xl md:text-8xl text-text mb-8 font-display tracking-tight">
+        The Grimoire
+    </h1>
+    <p class="text-xl text-silver max-w-2xl mx-auto font-light">
+        Our catalog of elemental services designed to harmonize your technology.
     </p>
 </Section>
 
 <Section>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         {#each services as service}
             <Card class="h-full">
-                <div class="flex items-start justify-between mb-4">
-                    <h3 class="text-2xl text-gold">{service.title}</h3>
-                    <span class="text-4xl">{service.icon}</span>
+                <div class="flex items-start justify-between mb-6">
+                    <h3 class="text-3xl text-text font-display">
+                        {service.title}
+                    </h3>
+                    <span class="text-5xl opacity-80">{service.icon}</span>
                 </div>
-                <p class="text-gray-400 mb-6 leading-relaxed min-h-[80px]">
+                <p
+                    class="text-text/70 mb-8 leading-relaxed min-h-[80px] text-lg"
+                >
                     {service.description}
                 </p>
-                <div class="border-t border-white/10 pt-4">
+                <div class="border-t border-silver/20 pt-6">
                     <div
-                        class="text-xs text-mana uppercase tracking-wider mb-2"
+                        class="text-xs text-emerald font-bold uppercase tracking-widest mb-3"
                     >
                         Technologies
                     </div>
                     <div class="flex flex-wrap gap-2">
                         {#each service.tech as tech}
                             <span
-                                class="px-2 py-1 bg-mana/10 text-mana text-xs rounded border border-mana/20"
+                                class="px-3 py-1 bg-emerald/10 text-emerald text-xs font-medium rounded-full border border-emerald/20"
                             >
                                 {tech}
                             </span>
@@ -94,6 +99,6 @@
 </Section>
 
 <Section class="text-center">
-    <h2 class="text-3xl text-white mb-8">Need a Custom Spell?</h2>
+    <h2 class="text-4xl text-text mb-8 font-display">Need a Custom Ritual?</h2>
     <Button href="/contact" variant="primary">Consult the Oracles</Button>
 </Section>

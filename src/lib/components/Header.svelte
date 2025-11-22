@@ -16,35 +16,39 @@
 </script>
 
 <header
-    class="fixed w-full top-0 z-50 bg-void/80 backdrop-blur-md border-b border-white/5"
+    class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-white/40 shadow-sm"
 >
     <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-24">
             <!-- Logo -->
             <a
                 href="/"
-                class="text-2xl font-display font-bold text-white tracking-widest hover:text-mana transition-colors"
+                class="text-2xl font-display font-bold text-text tracking-tight hover:text-emerald transition-colors flex items-center gap-2"
             >
-                DIGITAL<span class="text-mana">SORCERY</span>
+                <span class="text-emerald text-3xl">✦</span>
+                DIGITAL<span class="font-light">SORCERY</span>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden md:flex items-center space-x-10">
                 {#each links as link}
                     <a
                         href={link.href}
-                        class="text-sm font-mono uppercase tracking-wider hover:text-mana transition-colors {$page
+                        class="text-sm font-medium uppercase tracking-widest hover:text-emerald transition-colors relative group {$page
                             .url.pathname === link.href
-                            ? 'text-mana'
-                            : 'text-gray-400'}"
+                            ? 'text-emerald'
+                            : 'text-silver'}"
                     >
                         {link.label}
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-px bg-emerald transition-all duration-300 group-hover:w-full"
+                        ></span>
                     </a>
                 {/each}
                 <Button
                     href="/contact"
-                    variant="secondary"
-                    class="ml-4 !py-2 !px-4 !text-xs"
+                    variant="primary"
+                    class="ml-6 !py-2 !px-6 !text-xs"
                 >
                     Summon Us
                 </Button>
@@ -52,7 +56,7 @@
 
             <!-- Mobile Menu Button -->
             <button
-                class="md:hidden text-white p-2"
+                class="md:hidden text-text p-2"
                 onclick={toggleMenu}
                 aria-label="Toggle menu"
             >
@@ -84,15 +88,15 @@
 
     <!-- Mobile Nav -->
     {#if isMenuOpen}
-        <div class="md:hidden bg-void border-b border-white/10">
-            <nav class="flex flex-col p-4 space-y-4">
+        <div class="md:hidden bg-sandstone border-b border-white/20">
+            <nav class="flex flex-col p-6 space-y-6">
                 {#each links as link}
                     <a
                         href={link.href}
-                        class="text-sm font-mono uppercase tracking-wider hover:text-mana transition-colors {$page
+                        class="text-lg font-display font-medium tracking-wide hover:text-emerald transition-colors {$page
                             .url.pathname === link.href
-                            ? 'text-mana'
-                            : 'text-gray-400'}"
+                            ? 'text-emerald'
+                            : 'text-silver'}"
                         onclick={toggleMenu}
                     >
                         {link.label}
