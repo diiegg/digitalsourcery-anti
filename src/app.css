@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core Backgrounds & Neutrals */
+  --color-andalus-night: #0F1524;
+  --color-courtyard-plaster: #F6F0E6;
+  --color-stone-column: #C9B8A3;
+  --color-parchment-page: #ECE0CF;
+  --color-ink-charcoal: #141011;
+  --color-moonlight-ivory: #FDF9F3;
+
+  /* Brand Accent Colors */
+  --color-mezquita-red: #B6402F;
+  --color-caliphate-gold: #D7A44A;
+  --color-tile-lapis: #1C4F82;
+  --color-garden-emerald: #1D7A5B;
+  --color-citrus-ocher: #E8B75A;
+  --color-terracotta-clay: #A5562F;
+
+  /* Semantic Colors */
+  --color-verdant-oasis: #2B8F6F;
+  --color-ember-amber: #D98B3A;
+  --color-eclipse-crimson: #8E2633;
+
+  /* Fonts */
+  --font-display: "Inter", sans-serif; /* Placeholder, will update if specific font requested */
+  --font-body: "Inter", sans-serif;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--color-andalus-night);
+  color: var(--color-moonlight-ivory);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
